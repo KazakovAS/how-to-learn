@@ -1,0 +1,53 @@
+.table {
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 60px;
+}
+
+.table_theme_dark {
+  /*color: var(--color-supplementary);*/
+  margin-top: 80px;
+}
+
+.table__cell {
+  width: calc((100% - 33px * 3) / 4);
+}
+
+.table__cell:not(:nth-child(-n + 4)) {
+  margin-top: 60px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: calc((100% - 25px * 4) / 5);
+}
+
+/* сброс значения от table__cell */
+.table__cell_theme_dark:not(:nth-child(-n + 4)) {
+  margin-top: initial;
+}
+
+.table__cell_theme_dark:not(:nth-child(-n + 5)) {
+  margin-top: 80px;
+}
+
+.table__heading {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.table__text {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.table__source {
+  display: block;
+  font-style: normal;
+  margin-top: 20px;
+}

@@ -1,0 +1,8 @@
+:root {
+  --color-default: #000000;
+  --color-accent: #2f80ed;
+  --color-supplementary: #ffffff;
+  --background-color-default: #f2f2f2;
+  --background-color-supplementary: #1f1f1f;
+  --font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}

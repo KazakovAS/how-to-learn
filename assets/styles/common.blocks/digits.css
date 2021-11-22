@@ -1,0 +1,9 @@
+.digits {
+
+}
+
+.digits__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

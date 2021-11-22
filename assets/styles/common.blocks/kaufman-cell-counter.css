@@ -1,0 +1,8 @@
+.kaufman-cell-counter {
+  counter-reset: kaufman-cell-counter;
+}
+
+.kaufman-cell-counter__count::before {
+  counter-increment: kaufman-cell-counter;                 /* Инкрементирует счётчик*/
+  content: counter(kaufman-cell-counter);
+}
