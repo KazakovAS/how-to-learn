@@ -1,0 +1,16 @@
+.section-subtitle {
+  display: block;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.42;
+  margin-top: 20px;
+}
+
+.section-subtitle_inner {
+  display: block;
+}
+
+.section-subtitle_weight_regular {
+  font-weight: 400;
+}

@@ -1,0 +1,11 @@
+.logo {
+  display: inline-block;
+  object-fit: contain;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.logo_place_header,
+.logo_place_header {
+  width: 183px;
+}

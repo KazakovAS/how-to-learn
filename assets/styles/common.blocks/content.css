@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content__digits {
+  margin-top: 100px;
+}
+
+.content__feynman {
+  margin-top: 100px;
+}
