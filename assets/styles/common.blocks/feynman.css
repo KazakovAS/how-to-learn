@@ -41,3 +41,7 @@
   transform: translateY(-50%);
   color: var(--color-accent);
 }
+
+.feynman__link:hover {
+  text-decoration: underline;
+}

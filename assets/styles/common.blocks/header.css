@@ -34,6 +34,10 @@
   color: var(--color-accent);
 }
 
+.header__link:hover {
+  text-decoration: underline;
+}
+
 .header__main-illustration {
   width: 765px;
   height: 608px;

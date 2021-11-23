@@ -24,24 +24,9 @@ h6 {
 
 a {
   color: inherit;
-  outline: none;
   text-decoration: none;
 }
 
-input:focus,
-textarea:focus,
-select:focus,
-button:focus,
-a:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-button:focus-visible,
 a:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--color-accent);
@@ -50,8 +35,8 @@ a:focus-visible {
 img {
   max-width: 100%;
   height: auto;
-  aspect-ratio: attr(width) / attr(height);
-  object-fit: cover;
+  /*aspect-ratio: attr(width) / attr(height);*/
+  /*object-fit: cover;*/
 }
 
 html {
@@ -73,10 +58,4 @@ body {
 
   color: var(--color-default);
   -webkit-overflow-scrolling: touch;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
