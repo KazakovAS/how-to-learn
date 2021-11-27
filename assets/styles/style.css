@@ -221,7 +221,8 @@
 
 .table__source {
   display: block;
-  font-style: normal;
+  font-size: 18px;
+  line-height: 1.2;
   margin-top: 20px;
 }
 
@@ -401,8 +402,3 @@
 .social-icon_image_instagram::before {
   background-image: url(../images/instagram_color_white.svg);
 }
-
-
-
-
-
