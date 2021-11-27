@@ -197,18 +197,12 @@
 
 .table__cell {
   flex-basis: 250px;
-}
-
-.table__cell {
   margin-top: 60px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   flex-basis: 200px;
-}
-
-.table__cell_theme_dark {
   margin-top: 80px;
 }
 
