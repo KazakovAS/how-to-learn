@@ -219,13 +219,6 @@
   margin: 20px 0 0 0;
 }
 
-.table__source {
-  display: block;
-  font-size: 18px;
-  line-height: 1.2;
-  margin-top: 20px;
-}
-
 .feynman {
   position: relative;
   z-index: 1;
