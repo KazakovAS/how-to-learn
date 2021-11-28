@@ -43,6 +43,7 @@
   min-height: 600px;
   max-height: 756px;
   box-sizing: border-box;
+  overflow-y: hidden;
   /* выше установили ограничения для секции */
   background-color: var(--background-color-default);
   padding: 30px 64px;
@@ -63,6 +64,9 @@
 .header__subtitle {
   max-width: 388px;
 
+  /* тут я ваще нихрена не понял что конкретно надо добавить,
+   позиционирование тут совершенно не нужно, а и fw и так наследовался от page */
+  font-weight: 400;
   font-size: 18px;
   line-height: 25px;
 
@@ -85,6 +89,8 @@
   bottom: 0;
   right: 0;
   z-index: -1;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -241,6 +247,7 @@
   z-index: -1;
   width: 867px;
   height: 637px;
+  object-fit: contain;
 }
 
 .feynman__title {
