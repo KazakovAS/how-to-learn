@@ -32,10 +32,6 @@
   overflow-x: hidden;
 }
 
-.page__content {
-  margin-top: 100px;
-}
-
 .header {
   position: relative;
   z-index: 1;
@@ -78,11 +74,12 @@
 
 .header__link {
   text-decoration: none;
+  transition: opacity 1s;
   color: var(--color-accent);
 }
 
 .header__link:hover {
-  text-decoration: underline;
+  opacity: .5;
 }
 
 .header__main-illustration {
@@ -135,17 +132,10 @@
   flex-grow: 1;
 }
 
-.content__digits {
-  margin-top: 100px;
-}
-
-.content__feynman {
-  margin-top: 100px;
-}
-
 .description {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .two-columns {
@@ -188,6 +178,8 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-title {
@@ -205,7 +197,7 @@
   font-size: 24px;
   line-height: 34px;
   text-align: center;
-  margin: 20px auto 0;
+  margin: 20px 0 0 0;
 }
 
 .table {
@@ -287,10 +279,11 @@
   transform: translateY(-50%);
   color: var(--color-accent);
   text-decoration: none;
+  transition: opacity 1s;
 }
 
 .feynman__link:hover {
-  text-decoration: underline;
+  opacity: .5;
 }
 
 .kaufman {
@@ -372,10 +365,11 @@
   align-items: baseline;
   color: inherit;
   text-decoration: none;
+  transition: opacity 1s;
 }
 
 .footer__column-link:hover {
-  text-decoration: underline;
+  opacity: .5;
 }
 
 .footer__column-heading {
@@ -418,4 +412,196 @@
 
 .social-icon_image_instagram::before {
   background-image: url(../assets/images/instagram_color_white.svg);
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 217px;
+}
+
+.resources__logo-zone {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  margin-top: 80px;
+}
+
+.resources__link {
+  flex-grow: 1;
+  flex-basis: 270px;
+  display: flex;
+  justify-content: center;
+}
+
+.resources__link:hover .resources__logo {
+  opacity: .5;
+}
+
+.resources__logo {
+  height: 38px;
+  transition: opacity 1s;
+}
+
+.oakley {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-default);
+  padding-top: 160px;
+}
+
+.khan {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-default);
+  padding-top: 105px;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.khan__author {
+  order: -1;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  margin: 0;
+}
+
+.khan__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.khan__blockquote {
+  max-width: 790px;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 50px 0 0 0;
+}
+
+.khan__quote {
+  margin: 0;
+}
+
+.khan__quote-author {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 36px 0 0 0;
+}
+
+.khan__quote-author-subline {
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 10px 0 0 0;
+}
+
+.khan__book-container {
+  display: flex;
+  margin-top: 68px;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  font-size: 30px;
+  line-height: 42px;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 1s;
+  margin-left: 48px;
+}
+
+.khan__buy-link:hover {
+  opacity: .5;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  margin-bottom: -50px;
+}
+
+.video__iframes {
+  display: flex;
+  margin-top: 50px;
+}
+
+.video__iframe {
+  width: 515px;
+  height: 316px;
+  border: none;
+  object-fit: contain;
+}
+
+.video__iframe:not(:first-child) {
+  margin-left: 20px;
+}
+
+.techniques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.cards {
+  max-width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.cards__item {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cards__item:not(:nth-child(-3n + 4)) {
+  margin-left: 100px;
+}
+
+.cards__item:not(:nth-child(-n + 3)) {
+  margin-top: 60px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.cards__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 43px 0 0 0;
+}
+
+.cards__description {
+  font-size: 18px;
+  line-height: 23px;
+  margin: 16px 0 0 0;
 }
