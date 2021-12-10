@@ -1,3 +1,6 @@
+@import '../vendor/normalize.css';
+
+
 .page {
   --color-default: #000000;
   --color-accent: #2f80ed;
@@ -43,7 +46,7 @@
   min-height: 600px;
   max-height: 756px;
   box-sizing: border-box;
-  overflow-y: hidden;
+  overflow: hidden;
   /* выше установили ограничения для секции */
   background-color: var(--background-color-default);
   padding: 30px 64px;
@@ -102,6 +105,20 @@
   right: 0;
   z-index: -2;
   background-color: var(--color-accent);
+}
+
+.rotation {
+  animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform:rotate(0deg);
+  }
+
+  to {
+    transform:rotate(360deg);
+  }
 }
 
 .logo {
@@ -296,7 +313,7 @@
   top: 0;
   right: -210px;
   z-index: -1;
-  background-image: url(../images/kaufman-triangle.svg);
+  background-image: url(../assets/images/kaufman-triangle.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -392,13 +409,13 @@
 }
 
 .social-icon_image_facebook::before {
-  background-image: url(../images/facebook_color_white.svg);
+  background-image: url(../assets/images/facebook_color_white.svg);
 }
 
 .social-icon_image_vk::before {
-  background-image: url(../images/vk_color_white.svg);
+  background-image: url(../assets/images/vk_color_white.svg);
 }
 
 .social-icon_image_instagram::before {
-  background-image: url(../images/instagram_color_white.svg);
+  background-image: url(../assets/images/instagram_color_white.svg);
 }
