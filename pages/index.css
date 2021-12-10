@@ -1,607 +1,93 @@
 @import '../vendor/normalize.css';
 
-
-.page {
-  --color-default: #000000;
-  --color-accent: #2f80ed;
-  --color-supplementary: #ffffff;
-  --background-color-default: #f2f2f2;
-  --background-color-supplementary: #1f1f1f;
-  --font-family: 'Helvetica Neue', 'Arial', sans-serif;
-
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
-  min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, не ну кто как ¯\_(ツ)_/¯ */
-  /* поэтому выше установлена минимальная ширина страницы */
-  max-width: 1600px;
-
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: normal;
-
-  color: var(--color-default);
-
-  /* выше установили ограничение по максимальной ширине */
-  margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  overflow-x: hidden;
-}
-
-.header {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  box-sizing: border-box;
-  overflow: hidden;
-  /* выше установили ограничения для секции */
-  background-color: var(--background-color-default);
-  padding: 30px 64px;
-}
-
-.header__title {
-  max-width: 730px;
-  position: relative;
-  top: 20px;
-
-  font-weight: 700;
-  font-size: 102px;
-  line-height: 96px;
-
-  margin: 0;
-}
-
-.header__subtitle {
-  max-width: 388px;
-
-  /* тут я ваще нихрена не понял что конкретно надо добавить,
-   позиционирование тут совершенно не нужно, а и fw и так наследовался от page */
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-
-  margin: 0;
-}
-
-.header__link {
-  text-decoration: none;
-  transition: opacity 1s;
-  color: var(--color-accent);
-}
-
-.header__link:hover {
-  opacity: .5;
-}
-
-.header__main-illustration {
-  width: 765px;
-  height: 608px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  object-fit: contain;
-  object-position: right bottom;
-}
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-  position: absolute;
-  top: 64px;
-  right: 0;
-  z-index: -2;
-  background-color: var(--color-accent);
-}
-
-.rotation {
-  animation: rotation 20s linear infinite;
-}
-
-@keyframes rotation {
-  from {
-    transform:rotate(0deg);
-  }
-
-  to {
-    transform:rotate(360deg);
-  }
-}
-
-.logo {
-  width: 183px;
-  display: inline-block;
-  object-fit: contain;
-  flex-shrink: 0;
-  line-height: 0;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.two-columns {
-  width: 80%;
-  display: flex;
-  align-items: flex-start;
-}
-
-.two-columns__brief {
-  width: 175px;
-  flex-shrink: 0;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--color-accent);
-  margin: 0;
-}
-
-.two-columns__main-text {
-  flex-basis: 80%;
-  font-size: 24px;
-  line-height: 34px;
-  margin-left: 80px;
-}
-
-.two-columns__paragraph:first-child {
-  margin-top: 0;
-}
-
-.two-columns__paragraph:not(:first-child) {
-  margin: 30px auto 0;
-}
-
-.two-columns__span-accent {
-  font-weight: 700;
-}
-
-.digits {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.section-title {
-  width: 60%;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 1.15;
-  text-align: center;
-  margin: 0;
-}
-
-.section-subtitle {
-  width: 60%;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 34px;
-  text-align: center;
-  margin: 20px 0 0 0;
-}
-
-.table {
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.table__cell {
-  flex-basis: 250px;
-  margin-top: 60px;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  flex-basis: 200px;
-  margin-top: 80px;
-}
-
-.table__heading {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 0;
-}
-
-.table__text {
-  font-size: 18px;
-  line-height: 1.2;
-  margin: 20px 0 0 0;
-}
-
-.feynman {
-  position: relative;
-  z-index: 1;
-  min-height: 890px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 36px;
-  line-height: 51px;
-  background-color: var(--background-color-default);
-  box-sizing: border-box;
-  padding-top: 100px;
-}
-
-.feynman__photo {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 867px;
-  height: 637px;
-  object-fit: contain;
-}
-
-.feynman__title {
-  max-width: 648px;
-  font-weight: 700;
-  font-size: 120px;
-  line-height: 1.15;
-  text-align: center;
-  margin: 0;
-}
-
-.feynman__subtitle {
-  margin: 70px 0 0 0;
-}
-
-.feynman__link {
-  position: absolute;
-  top: 50%;
-  right: 48px;
-  transform: translateY(-50%);
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: opacity 1s;
-}
-
-.feynman__link:hover {
-  opacity: .5;
-}
-
-.kaufman {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--color-supplementary);
-  background-color: var(--background-color-supplementary);
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.kaufman__triangle {
-  width: 877px;
-  height: 877px;
-  position: absolute;
-  top: 0;
-  right: -210px;
-  z-index: -1;
-  background-image: url(../assets/images/kaufman-triangle.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  min-height: 350px;
-  background-color: var(--background-color-supplementary);
-  color: var(--color-supplementary);
-  box-sizing: border-box;
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-
-.footer__columns {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__column {
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.footer__column_content_copyright {
-  flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.footer__author {
-  font-size: 18px;
-  line-height: 25px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  margin: 0;
-}
-
-.footer__column-nav {
-  margin: 20px 0 16px 0;
-}
-
-.footer__column-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer__column-link {
-  display: flex;
-  align-items: baseline;
-  color: inherit;
-  text-decoration: none;
-  transition: opacity 1s;
-}
-
-.footer__column-link:hover {
-  opacity: .5;
-}
-
-.footer__column-heading {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-  margin: 0;
-}
-
-.footer__social-icon {
-  position: relative;
-  top: 2px;
-  margin-right: 10px;
-}
-
-.footer__social-icon::before {
-  width: 16px;
-  height: 16px;
-}
-
-.social-icon {
-  display: flex;
-  flex-shrink: 0;
-}
-
-.social-icon::before {
-  content: '';
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.social-icon_image_facebook::before {
-  background-image: url(../assets/images/facebook_color_white.svg);
-}
-
-.social-icon_image_vk::before {
-  background-image: url(../assets/images/vk_color_white.svg);
-}
-
-.social-icon_image_instagram::before {
-  background-image: url(../assets/images/instagram_color_white.svg);
-}
-
-.resources {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 217px;
-}
-
-.resources__logo-zone {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  margin-top: 80px;
-}
-
-.resources__link {
-  flex-grow: 1;
-  flex-basis: 270px;
-  display: flex;
-  justify-content: center;
-}
-
-.resources__link:hover .resources__logo {
-  opacity: .5;
-}
-
-.resources__logo {
-  height: 38px;
-  transition: opacity 1s;
-}
-
-.oakley {
-  display: flex;
-  justify-content: center;
-  background-color: var(--background-color-default);
-  padding-top: 160px;
-}
-
-.khan {
-  display: flex;
-  justify-content: center;
-  background-color: var(--background-color-default);
-  padding-top: 105px;
-}
-
-.khan__container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.khan__author {
-  order: -1;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 42px;
-  margin: 0;
-}
-
-.khan__title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 1.15;
-  margin: 0;
-}
-
-.khan__blockquote {
-  max-width: 790px;
-  font-size: 24px;
-  line-height: 34px;
-  margin: 50px 0 0 0;
-}
-
-.khan__quote {
-  margin: 0;
-}
-
-.khan__quote-author {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 36px 0 0 0;
-}
-
-.khan__quote-author-subline {
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 10px 0 0 0;
-}
-
-.khan__book-container {
-  display: flex;
-  margin-top: 68px;
-}
-
-.khan__book-pic {
-  width: 620px;
-  height: 608px;
-  object-fit: cover;
-  object-position: top;
-}
-
-.khan__buy-link {
-  font-size: 30px;
-  line-height: 42px;
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: opacity 1s;
-  margin-left: 48px;
-}
-
-.khan__buy-link:hover {
-  opacity: .5;
-}
-
-.video {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  margin-bottom: -50px;
-}
-
-.video__iframes {
-  display: flex;
-  margin-top: 50px;
-}
-
-.video__iframe {
-  width: 515px;
-  height: 316px;
-  border: none;
-  object-fit: contain;
-}
-
-.video__iframe:not(:first-child) {
-  margin-left: 20px;
-}
-
-.techniques {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  padding-top: 100px;
-  margin: 0 auto;
-}
-
-.cards {
-  max-width: 920px;
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-  margin-top: 60px;
-}
-
-.cards__item {
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.cards__item:not(:nth-child(-3n + 4)) {
-  margin-left: 100px;
-}
-
-.cards__item:not(:nth-child(-n + 3)) {
-  margin-top: 60px;
-}
-
-.cards__image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-}
-
-.cards__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 43px 0 0 0;
-}
-
-.cards__description {
-  font-size: 18px;
-  line-height: 23px;
-  margin: 16px 0 0 0;
-}
+@import '../blocks/page/page.css';
+
+@import '../blocks/header/header.css';
+@import '../blocks/header/__title/header__title.css';
+@import '../blocks/header/__subtitle/header__subtitle.css';
+@import '../blocks/header/__link/header__link.css';
+@import '../blocks/header/__main-illustration/header__main-illustration.css';
+@import '../blocks/header/__square-pic/header__square-pic.css';
+
+@import '../blocks/rotation/rotation.css';
+
+@import '../blocks/logo/logo.css';
+
+@import '../blocks/content/content.css';
+
+@import '../blocks/description/description.css';
+
+@import '../blocks/two-columns/two-columns.css';
+@import '../blocks/two-columns/__brief/two-columns__brief.css';
+@import '../blocks/two-columns/__main-text/two-columns__main-text.css';
+@import '../blocks/two-columns/__paragraph/two-columns__paragraph.css';
+@import '../blocks/two-columns/__span-accent/two-columns__span-accent.css';
+
+@import '../blocks/digits/digits.css';
+
+@import '../blocks/section-title/section-title.css';
+
+@import '../blocks/section-subtitle/section-subtitle.css';
+
+@import '../blocks/table/table.css';
+@import '../blocks/table/__cell/table__cell.css';
+@import '../blocks/table/__cell/_theme/table__cell_theme_dark.css';
+@import '../blocks/table/__heading/table__heading.css';
+@import '../blocks/table/__text/table__text.css';
+
+@import '../blocks/feynman/feynman.css';
+@import '../blocks/feynman/__photo/feynman__photo.css';
+@import '../blocks/feynman/__title/feynman__title.css';
+@import '../blocks/feynman/__subtitle/feynman__subtitle.css';
+@import '../blocks/feynman/__link/feynman__link.css';
+
+@import '../blocks/kaufman/kaufman.css';
+@import '../blocks/kaufman/__triangle/kaufman__triangle.css';
+
+@import '../blocks/footer/footer.css';
+@import '../blocks/footer/__columns/footer__columns.css';
+@import '../blocks/footer/__column/footer__column.css';
+@import '../blocks/footer/__column/_content/footer__column_content_copyright.css';
+@import '../blocks/footer/__author/footer__author.css';
+@import '../blocks/footer/__column-nav/footer__column-nav.css';
+@import '../blocks/footer/__column-links/footer__column-links.css';
+@import '../blocks/footer/__column-link/footer__column-link.css';
+@import '../blocks/footer/__column-heading/footer__column-heading.css';
+@import '../blocks/footer/__social-icon/footer__social-icon.css';
+
+@import '../blocks/social-icon/social-icon.css';
+@import '../blocks/social-icon/_image/social-icon_image_vk.css';
+@import '../blocks/social-icon/_image/social-icon_image_instagram.css';
+@import '../blocks/social-icon/_image/social-icon_image_facebook.css';
+
+@import '../blocks/resources/resources.css';
+@import '../blocks/resources/__logo-zone/resources__logo-zone.css';
+@import '../blocks/resources/__link/resources__link.css';
+@import '../blocks/resources/__logo/resources__logo.css';
+
+@import '../blocks/oakley/oakley.css';
+
+@import '../blocks/khan/khan.css';
+@import '../blocks/khan/__container/khan__container.css';
+@import '../blocks/khan/__author/khan__author.css';
+@import '../blocks/khan/__title/khan__title.css';
+@import '../blocks/khan/__blockquote/khan__blockquote.css';
+@import '../blocks/khan/__quote/khan__quote.css';
+@import '../blocks/khan/__quote-author/khan__quote-author.css';
+@import '../blocks/khan/__quote-author-subline/khan__quote-author-subline.css';
+@import '../blocks/khan/__book-container/khan__book-container.css';
+@import '../blocks/khan/__book-pic/khan__book-pic.css';
+@import '../blocks/khan/__buy-link/khan__buy-link.css';
+
+@import '../blocks/video/video.css';
+@import '../blocks/video/__iframes/video__iframes.css';
+@import '../blocks/video/__iframe/video__iframe.css';
+@import '../blocks/video/__iframe/video__iframe.css';
+
+@import '../blocks/techniques/techniques.css';
+
+@import '../blocks/cards/cards.css';
+@import '../blocks/cards/__item/cards__item.css';
+@import '../blocks/cards/__image/cards__image.css';
+@import '../blocks/cards/__title/cards__title.css';
+@import '../blocks/cards/__description/cards__description.css';
