@@ -1,0 +1,11 @@
+.social-icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.social-icon::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

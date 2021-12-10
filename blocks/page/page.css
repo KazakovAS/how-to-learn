@@ -1,0 +1,26 @@
+.page {
+  --color-default: #000000;
+  --color-accent: #2f80ed;
+  --color-supplementary: #ffffff;
+  --background-color-default: #f2f2f2;
+  --background-color-supplementary: #1f1f1f;
+  --font-family: 'Helvetica Neue', 'Arial', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  min-width: 1100px;
+  max-width: 1600px;
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+
+  color: var(--color-default);
+
+  margin: 0 auto;
+  overflow-x: hidden;
+}

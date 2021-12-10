@@ -1,0 +1,10 @@
+.footer__social-icon {
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+}
+
+.footer__social-icon::before {
+  width: 16px;
+  height: 16px;
+}

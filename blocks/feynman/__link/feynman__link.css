@@ -1,0 +1,13 @@
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 1s;
+}
+
+.feynman__link:hover {
+  opacity: .5;
+}
