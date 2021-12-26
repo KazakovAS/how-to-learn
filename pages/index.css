@@ -1,4 +1,5 @@
 @import '../vendor/normalize.css';
+@import '../variables/variables.css';
 
 @import '../blocks/page/page.css';
 
@@ -49,16 +50,14 @@
 @import '../blocks/footer/__column/footer__column.css';
 @import '../blocks/footer/__column/_content/footer__column_content_copyright.css';
 @import '../blocks/footer/__author/footer__author.css';
-@import '../blocks/footer/__column-nav/footer__column-nav.css';
 @import '../blocks/footer/__column-links/footer__column-links.css';
 @import '../blocks/footer/__column-link/footer__column-link.css';
 @import '../blocks/footer/__column-heading/footer__column-heading.css';
 @import '../blocks/footer/__social-icon/footer__social-icon.css';
 
-@import '../blocks/social-icon/social-icon.css';
-@import '../blocks/social-icon/_image/social-icon_image_vk.css';
-@import '../blocks/social-icon/_image/social-icon_image_instagram.css';
-@import '../blocks/social-icon/_image/social-icon_image_facebook.css';
+@import '../blocks/footer/__social-icon/_image/footer__social-icon_image_vk.css';
+@import '../blocks/footer/__social-icon/_image/footer__social-icon_image_instagram.css';
+@import '../blocks/footer/__social-icon/_image/footer__social-icon_image_facebook.css';
 
 @import '../blocks/resources/resources.css';
 @import '../blocks/resources/__logo-zone/resources__logo-zone.css';
