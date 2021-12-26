@@ -1,5 +1,7 @@
 .footer__social-icon {
   position: relative;
+  display: flex;
+  flex-shrink: 0;
   top: 2px;
   margin-right: 10px;
 }
@@ -7,4 +9,8 @@
 .footer__social-icon::before {
   width: 16px;
   height: 16px;
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

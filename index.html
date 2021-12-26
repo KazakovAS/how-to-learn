@@ -326,8 +326,8 @@
         <section class="khan">
           <div class="khan__container">
             <!--  чтобы сохранить нормальную структуру заголовков поменял их местами, и визуально поменял обратно при помощи ордер        -->
+            <p class="khan__author">Салман Хан</p>
             <h2 class="khan__title">Весь мир — школа</h2>
-            <h3 class="khan__author">Салман Хан</h3>
 
             <blockquote class="khan__blockquote">
               <p class="khan__quote">
@@ -593,7 +593,7 @@
 
       <footer class="footer">
         <div class="footer__columns">
-          <section class="footer__column footer__column_content_copyright">
+          <div class="footer__column footer__column_content_copyright">
             <img
               class="logo logo_place_footer"
               src="./assets/images/logo_place_footer.svg"
@@ -601,106 +601,97 @@
             >
 
             <p class="footer__author">&copy; 2019. Виктор Абанькин</p>
-          </section>
+          </div>
 
-          <section class="footer__column footer__column_content_info">
+          <nav class="footer__column footer__column_content_info">
             <h2 class="footer__column-heading">О Практикуме</h2>
+            <ul class="footer__column-links">
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  Главная
+                </a>
+              </li>
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  Концепция
+                </a>
+              </li>
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  Наставники
+                </a>
+              </li>
+        </ul>
+          </nav>
 
-            <nav class="footer__column-nav">
-              <ul class="footer__column-links">
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
-                  >
-                    Главная
-                  </a>
-                </li>
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
-                  >
-                    Концепция
-                  </a>
-                </li>
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
-                  >
-                    Наставники
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </section>
-
-          <section class="footer__column footer__column_content_social">
+          <nav class="footer__column footer__column_content_social">
             <h2 class="footer__column-heading">Соцсети</h2>
-
-            <nav class="footer__column-nav">
-              <ul class="footer__column-links">
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
+            <ul class="footer__column-links">
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  <span
+                    class="
+                      footer__social-icon
+                      footer__social-icon_image_facebook
+                    "
+                    aria-hidden="true"
                   >
-                    <span
-                      class="
-                        social-icon
-                        social-icon_image_facebook
-                        footer__social-icon
-                      "
-                      aria-hidden="true"
-                    >
-                    </span>
-                    Facebook
-                  </a>
-                </li>
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
+                  </span>
+                  Facebook
+                </a>
+              </li>
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  <span
+                    class="
+                      footer__social-icon
+                      footer__social-icon_image_vk
+                    "
+                    aria-hidden="true"
                   >
-                    <span
-                      class="
-                        social-icon
-                        social-icon_image_vk
-                        footer__social-icon
-                      "
-                      aria-hidden="true"
-                    >
-                    </span>
-                    Вконтакте
-                  </a>
-                </li>
-                <li class="footer__column-links-item">
-                  <a
-                    class="footer__column-link"
-                    href="#"
-                    target="_blank"
+                  </span>
+                  Вконтакте
+                </a>
+              </li>
+              <li class="footer__column-links-item">
+                <a
+                  class="footer__column-link"
+                  href="#"
+                  target="_blank"
+                >
+                  <span
+                    class="
+                      footer__social-icon
+                      footer__social-icon_image_instagram
+                    "
+                    aria-hidden="true"
                   >
-                    <span
-                      class="
-                        social-icon
-                        social-icon_image_instagram
-                        footer__social-icon
-                      "
-                      aria-hidden="true"
-                    >
-                    </span>
-                    Instagram
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </section>
+                  </span>
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </footer>
     </div>
